@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Stone chunk
   icon: {fileID: -1440351317, guid: 56ba022b3e09144d4935e0ab6982e288, type: 3}
+  prefab: {fileID: 7606353045238934716, guid: c18a2d7183fa1450aba282ab8faddd3d, type: 3}

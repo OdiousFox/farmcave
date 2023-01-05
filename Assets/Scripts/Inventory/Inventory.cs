@@ -33,16 +33,17 @@ public class Inventory : MonoBehaviour {
 
     }
 
-    public void Add(ItemData itemData) {
-        lastItemData = itemData;
-        // Debug.Log("add" + itemData);   
-        int contains = ContainsItem(itemData, 50);
+    public void Add(ItemData ItemData) {
+        lastItemData = ItemData;
+        // Debug.Log("add" + ItemData);   
+        int contains = ContainsItem(ItemData, 50);
         if (contains != -1) {
-            // Debug.Log("inventoryitem " + item + "    itemdata " + itemData);
+            // Debug.Log("inventoryitem " + item + "    itemdata " + ItemData);
             inventory[contains].AddToStack();
             OnInventoryChange?.Invoke(inventory);
+            // Debug.Log("In ADD first if");
         } else {
-            InventoryItem newItem = new InventoryItem(itemData);
+            InventoryItem newItem = new InventoryItem(ItemData);
             int location = 30;
             for (int i = 0; i < 30; i++) {
                 if (!inventory.ContainsKey(i)) {
@@ -52,6 +53,7 @@ public class Inventory : MonoBehaviour {
             }
             if (location < 30) {
                 inventory.Add(location, newItem);
+                // Debug.Log(newItem.ItemData);
                 OnInventoryChange?.Invoke(inventory);
                 if (location >= 29) {
                     full = true;
@@ -60,26 +62,28 @@ public class Inventory : MonoBehaviour {
             }
 
         }
+        // Debug.Log("In ADD");
     }
 
     public void Remove(int location) {
         if (inventory.TryGetValue(location, out InventoryItem item)) {
             item.RemoveFromStack();
-            if (item.stackSize == 0) {
+            if (item.StackSize == 0) {
                 inventory.Remove(location);
                 OnInventoryChange?.Invoke(inventory);
                 full = false;
             }
         }
+        // Debug.Log("In REMOVE");
     }
 
-    private int ContainsItem(ItemData itemData, int maxStackSize) {
+    private int ContainsItem(ItemData ItemData, int maxStackSize) {
         foreach (var item in inventory) {
-            if (item.Value.itemData.name.Equals(itemData.name) && item.Value.stackSize < maxStackSize) {
+            if (item.Value.ItemData.name.Equals(ItemData.name) && item.Value.StackSize < maxStackSize) {
                 return item.Key;
             }
         }
-
+        // Debug.Log("In CONTAINS");
         return -1;
     }
 
@@ -100,21 +104,24 @@ public class Inventory : MonoBehaviour {
             
         }
         foreach (var VARIABLE in inventory) {
-            Debug.Log(VARIABLE.Value.itemData.name);
+            Debug.Log(VARIABLE.Value.ItemData.name);
         }
         OnInventoryChange?.Invoke(inventory);
+        // Debug.Log("In SWITCH LOCATION");
 
     }
 
     private void dropItem(InventorySlot slot) {
         InventoryItem item = inventory[slot.Index];
-        GameObject itemPrefab = item.itemData.Prefab;
-        int stack = item.stackSize;
+        GameObject itemPrefab = item.ItemData.Prefab;
+        int stack = item.StackSize;
 
         InstantiateDrops(itemPrefab, stack);
         
         inventory.Remove(slot.Index);
         OnInventoryChange?.Invoke(inventory);
+        // Debug.Log("In DROP ITEM");
+
     }
     
     void InstantiateDrops(GameObject item, int amount) {
@@ -126,4 +133,5 @@ public class Inventory : MonoBehaviour {
             drop.GetComponent<Rigidbody2D>().AddForce((dropDirection * 200f));
         }
     }
+
 }

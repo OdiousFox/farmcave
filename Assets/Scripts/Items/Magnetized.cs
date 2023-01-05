@@ -41,11 +41,10 @@ public class Magnetized : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D col) {
         inTrigger = true;
         if (col.gameObject.CompareTag("Magnet")) {
-            if (!onFirstPass && !destination.transform.parent.GetComponent<Inventory>().Full) {
+            if (!onFirstPass && !destination.gameObject.GetComponent<Inventory>().Full) {
                 magnet = true;
             } else onFirstPass = false;
         }
-
     }
 
     private void OnTriggerExit(Collider other) {

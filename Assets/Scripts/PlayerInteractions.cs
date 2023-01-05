@@ -1,11 +1,6 @@
 using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour {
-    private GameObject player;
-
-    private void Start() {
-        player = transform.parent.gameObject;
-    }
 
     private void OnTriggerEnter2D(Collider2D col) {
         
@@ -15,7 +10,7 @@ public class PlayerInteractions : MonoBehaviour {
         if (magnet != null) goIn = col.GetComponent<Magnetized>().WaitFirstCollect;
         if (collectible != null && !goIn) {
             //Debug.Log("Onfirstpass:  " + col.GetComponent<Magnetized>().OnFirstPass + " collider :   " + col);
-            if (!player.GetComponent<Inventory>().Full) {
+            if (!GetComponent<Inventory>().Full) {
                 collectible.Collect();
             }
         }

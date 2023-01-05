@@ -4,8 +4,20 @@ using UnityEngine;
 
 [Serializable]
 public class InventoryItem {
-    public ItemData itemData;
-    public int stackSize;
+    [SerializeField] private ItemData itemData;
+    [SerializeField] private int stackSize;
+
+    public ItemData ItemData {
+        get => itemData;
+        set => itemData = value;
+    }
+
+    public int StackSize {
+        get => stackSize;
+        set => stackSize = value;
+    }
+
+
 
     public InventoryItem(ItemData item) {
         itemData = item;

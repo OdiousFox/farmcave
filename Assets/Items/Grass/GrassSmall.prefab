@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   durability: 1
   dropForce: 200
-  amount: 10
+  amount: 2
   drops:
   - {fileID: 1196419524479477452, guid: f4adee4cc1ce2458d8e2ab145bd4329a, type: 3}
 --- !u!61 &1276241343755898876

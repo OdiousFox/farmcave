@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Potato Seed
   icon: {fileID: 1180311235, guid: 42ca6331b62b94b7498ab631aa646d99, type: 3}
+  prefab: {fileID: 1196419524479477452, guid: f4adee4cc1ce2458d8e2ab145bd4329a, type: 3}

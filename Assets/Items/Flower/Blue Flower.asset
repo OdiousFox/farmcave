@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Blue Flower
   icon: {fileID: 1800969961, guid: 42ca6331b62b94b7498ab631aa646d99, type: 3}
+  prefab: {fileID: 2996901182486538864, guid: 172249f22a4f34588bf82eb845853d4b, type: 3}
+  placeablePrefab: {fileID: 3700102854878621253, guid: 5536e235a85a04008850043c2fb1847c, type: 3}

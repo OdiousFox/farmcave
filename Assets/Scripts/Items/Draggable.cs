@@ -25,9 +25,9 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnEndDrag(PointerEventData eventData) {
         transform.SetParent(parentAfterDrag);
-        transform.SetSiblingIndex(1);
+        transform.SetSiblingIndex(2);
         GameObject dropped = eventData.pointerEnter;
-        if (dropped != null && dropped.transform.parent != transform.parent) {
+        if (dropped != null && dropped.transform.parent.GetComponent<InventorySlot>() != null && dropped.transform.parent != transform.parent) {
             OnItemMove?.Invoke(transform.parent.GetComponent<InventorySlot>(), dropped.transform.parent.GetComponent<InventorySlot>());
         }
         

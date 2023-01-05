@@ -12,7 +12,7 @@ public class ToolBar : MonoBehaviour
     [SerializeField] private GameObject player;
     
     
-    public static event Action<ItemData> sendItem;
+    public static event Action<int> sendMarker;
 
     private KeyCode[] keyCodes = {
         KeyCode.Alpha1,
@@ -36,7 +36,7 @@ public class ToolBar : MonoBehaviour
                 SetMarker(markerLocation, false);
                 markerLocation = i;
                 SetMarker(i, true);
-                SendItem(i);
+                SendMarker(i);
             }
         }
     }
@@ -45,9 +45,8 @@ public class ToolBar : MonoBehaviour
         transform.GetChild(i).Find("SelectionMarker").transform.GetComponent<Image>().enabled = state;
     }
 
-    private void SendItem(int i) {
-        InventoryItem item = player.GetComponent<Inventory>().inventory[i];
-        sendItem?.Invoke(item.ItemData);
+    private void SendMarker(int i) {
+        sendMarker?.Invoke(i);
     }
 }
 

@@ -14,13 +14,10 @@ public class InventoryManager : MonoBehaviour {
 
     private void OnEnable() {
         Inventory.OnInventoryChange += DrawInventory;
-        // Debug.Log("enable");
     }
     
     private void OnDisable() {
         Inventory.OnInventoryChange -= DrawInventory;
-        // Debug.Log("disable");
-
     }
     
     void ResetInventory() {

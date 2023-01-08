@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d78419b2d31346699c6f9bbe73c53d0, type: 3}
   m_Name: Rock1
   m_EditorClassIdentifier: 
-  tiles: []
+  tiles:
+  - {fileID: 11400000, guid: 157b7abf0580046aca883754f66d776b, type: 2}
   durability: 1

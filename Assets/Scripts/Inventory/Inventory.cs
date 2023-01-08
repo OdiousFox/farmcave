@@ -30,7 +30,6 @@ public class Inventory : MonoBehaviour {
         ItemCollect.OnCollected -= Add;
         Draggable.OnItemMove -= switchLocation;
         Draggable.OnItemDrop -= dropItem;
-
     }
 
     public void Add(ItemData ItemData) {
@@ -70,9 +69,9 @@ public class Inventory : MonoBehaviour {
             item.RemoveFromStack();
             if (item.StackSize == 0) {
                 inventory.Remove(location);
-                OnInventoryChange?.Invoke(inventory);
                 full = false;
             }
+            OnInventoryChange?.Invoke(inventory);
         }
         // Debug.Log("In REMOVE");
     }

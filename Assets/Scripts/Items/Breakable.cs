@@ -11,6 +11,11 @@ public class Breakable : MonoBehaviour {
     [SerializeField] private List<GameObject> drops;
     // [SerializeField] private int sturdiness = 1;
 
+    public int Amount {
+        get => amount;
+        set => amount = value;
+    }
+
     private void OnMouseDown() {
         durability--;
         if (durability <= 0) {

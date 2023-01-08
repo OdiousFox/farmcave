@@ -56,6 +56,8 @@ public class World : MonoBehaviour {
                 Instantiate(grassSpawnables[0], new Vector3(type.Position.x, type.Position.y, -1), Quaternion.identity);
             } else if (type.Type > 0.9f && type.Type < 1.1f && rand < 2f) {
                 Instantiate(grassSpawnables[1], new Vector3(type.Position.x, type.Position.y, -1), Quaternion.identity);
+            } else if (type.Type > 0.9f && type.Type < 1.1f && rand < 2.5f) {
+                Instantiate(grassSpawnables[2], new Vector3(type.Position.x, type.Position.y, -1), Quaternion.identity);
             }
         }
     }

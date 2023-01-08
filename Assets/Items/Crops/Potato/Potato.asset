@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49188c663ef3c42fbbbf8cb4decda9ba, type: 3}
-  m_Name: Potato Seed
+  m_Name: Potato
   m_EditorClassIdentifier: 
-  displayName: Potato Seed
-  icon: {fileID: 1180311235, guid: 42ca6331b62b94b7498ab631aa646d99, type: 3}
-  prefab: {fileID: 1196419524479477452, guid: f4adee4cc1ce2458d8e2ab145bd4329a, type: 3}
-  placeablePrefab: {fileID: 2953339030155323727, guid: 9e76557eb516348af8b397b182741ba7, type: 3}
+  displayName: Potato
+  icon: {fileID: 461317424, guid: 42ca6331b62b94b7498ab631aa646d99, type: 3}
+  prefab: {fileID: 6851435039327460854, guid: 0b810fcaf13c44131845f81d4afe5abb, type: 3}
+  placeablePrefab: {fileID: 0}

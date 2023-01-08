@@ -1313,7 +1313,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 1.2
 --- !u!1001 &306059192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52012,6 +52012,7 @@ MonoBehaviour:
   placeables:
   - {fileID: 11400000, guid: 8a19e56de5d6f48dcb67a6fb53bd11b6, type: 2}
   player: {fileID: 469645613}
+  placementIndicator: {fileID: 9072178684020946685, guid: 6e60ae241f0564fc3bcaa1c583ae7646, type: 3}
 --- !u!114 &941051130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53739,6 +53740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1442346734}
   - component: {fileID: 1442346735}
+  - component: {fileID: 1442346736}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -53779,6 +53781,7 @@ MonoBehaviour:
   grassSpawnables:
   - {fileID: 2966423453714634425, guid: 37163e4dcbe324b1a94b03193a7dd645, type: 3}
   - {fileID: 3700102854878621253, guid: 5536e235a85a04008850043c2fb1847c, type: 3}
+  - {fileID: 3130337558210374108, guid: b6d30ae26fb1344138f4906dadcca547, type: 3}
   dirtTiles:
   - {fileID: 11400000, guid: d0bb4db43c906454badd3e938983259d, type: 2}
   - {fileID: 11400000, guid: d572fffa9342741c694765130e5488d5, type: 2}
@@ -53786,6 +53789,18 @@ MonoBehaviour:
   grassTiles:
   - {fileID: 11400000, guid: 1361069eeca5a4771bb4f57d8cff62bf, type: 2}
   - {fileID: 11400000, guid: b7a6f4e3e9a474851bdea6a7fb6e538f, type: 2}
+--- !u!114 &1442346736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442346733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7288d1e38ddb74ba1b5decad77345890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1464917071
 PrefabInstance:
   m_ObjectHideFlags: 0

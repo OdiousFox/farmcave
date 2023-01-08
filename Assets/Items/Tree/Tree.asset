@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49188c663ef3c42fbbbf8cb4decda9ba, type: 3}
-  m_Name: Wood
+  m_Name: Tree
   m_EditorClassIdentifier: 
   displayName: Wood
   icon: {fileID: -347863229, guid: 56ba022b3e09144d4935e0ab6982e288, type: 3}
+  prefab: {fileID: 3383139194736830118, guid: 9761c3066919b414f98a0bec88d6eb7e, type: 3}
+  placeablePrefab: {fileID: 0}
